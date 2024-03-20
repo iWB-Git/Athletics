@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Performance</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="icon" href="/run1.jpg" >
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+        
+    </head>
+
+    <body onload="fetchathlete()">
+        
+
+<div class="viewer">
+
+	<div class="sidebar">
+		
+		<div class="top-button">
+			
+			<a href="#">
+				<svg version="1.1" id="run-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+		 		viewBox="0 0 54 50" style="enable-background:new 0 0 54 50;" xml:space="preserve">
+					<g>
+						<circle cx="44.3" cy="6.1" r="6"/>
+						<path d="M18.1,27.1L18.1,27.1L1,45c-1.1,1.1-1.1,2.9,0.1,4.1l0,0c1.1,1.1,2.9,1.1,4.1,0.1l17.9-17.1l6,3l-9,9
+							c-1.1,1.1-1.1,2.9,0,4.1l0,0c1.1,1.1,2.9,1.1,4,0.1l9-8.4c2.2-2,2.4-5.5,0.4-7.7l-4.4-5l6-6l2.8,5c1.3,2.3,4.1,3.2,6.4,2.1l8.2-4.6
+							c1.4-0.8,1.7-2.5,0.8-3.8l0,0c-0.7-1-2-1.3-3.1-0.8l-7.1,3.2l-3.8-6c-2.1-3.3-5.1-6-8.6-7.7l-8.3-4.2c-1.4-0.7-3.2-0.7-4.6,0.1
+							L9.6,8.7c-1.3,0.7-1.7,2.5-0.8,3.7l0,0c0.7,1,2,1.3,3.1,0.7l8.1-4.1l6,4l-4.5,4C18.8,19.5,17.4,23.3,18.1,27.1z"/>
+					</g>
+				</svg>
+			</a>
+
+		</div>
+
+		<div class="social-icons">
+			
+			<a href="#"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="switch-icon"><path d="M14.176 24h3.674c3.376 0 6.15-2.774 6.15-6.15V6.15C24 2.775 21.226 0 17.85 0H14.1c-.074 0-.15.074-.15.15v23.7c-.001.076.075.15.226.15zm4.574-13.199c1.351 0 2.399 1.125 2.399 2.398 0 1.352-1.125 2.4-2.399 2.4-1.35 0-2.4-1.049-2.4-2.4-.075-1.349 1.05-2.398 2.4-2.398zM11.4 0H6.15C2.775 0 0 2.775 0 6.15v11.7C0 21.226 2.775 24 6.15 24h5.25c.074 0 .15-.074.15-.149V.15c.001-.076-.075-.15-.15-.15zM9.676 22.051H6.15c-2.326 0-4.201-1.875-4.201-4.201V6.15c0-2.326 1.875-4.201 4.201-4.201H9.6l.076 20.102zM3.75 7.199c0 1.275.975 2.25 2.25 2.25s2.25-.975 2.25-2.25c0-1.273-.975-2.25-2.25-2.25s-2.25.977-2.25 2.25z"/></svg></a>
+
+			<a href="#"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="facebook-icon"><path d="M22.676 0H1.324C.593 0 0 .593 0 1.324v21.352C0 23.408.593 24 1.324 24h11.494v-9.294H9.689v-3.621h3.129V8.41c0-3.099 1.894-4.785 4.659-4.785 1.325 0 2.464.097 2.796.141v3.24h-1.921c-1.5 0-1.792.721-1.792 1.771v2.311h3.584l-.465 3.63H16.56V24h6.115c.733 0 1.325-.592 1.325-1.324V1.324C24 .593 23.408 0 22.676 0"/></svg></a>
+
+			<a href="#"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="instagram-icon"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg></a>
+
+		</div>
+
+	</div>
+
+	<div class="main-content">
+		
+		<div class="content-left" id="content-left">
+			<div class="leftt">
+                <img src="images/nike.svg" class="nike-logo">
+            </div>
+			
+			<div class="title" id="title">HAbhibi inc.</div>
+
+		</div>
+		<div class="image-right" id="imgr">
+
+			<img src="images/eluidFlip.png" class="image-right-image" id="zenImg"/>
+
+		</div>
+
+	</div>
+
+
+</div>
+        
+        
+        <div class="formPop">
+            <button class="formBtn" onclick="openForm()">ADD RECORD</button>
+
+            <div class="form-popup" id="myForm">
+                <form class="form-container">
+                    <h1>Add Race</h1>
+                    <label>
+                        <span>Championship Name:</span>
+                        <input id="champname" type="text" />
+                    </label>
+                    <label style="padding-top:3% ;">
+                        <span>Date:</span>
+                        <div class="timing">
+                            <input type="date" id="year" name="month">
+                        </div>
+                    </label>
+                    <label>
+                        <span>Race Type:</span>
+                        <input id="racetype" type="text" />
+                    </label>
+                    <label>
+                        <span>Time Taken:</span>
+                        <input id="timetaken" type="text" />
+                    </label>
+                    <label>
+                        <span>Medal:</span>
+                        <input id="medal" type="text" />
+                    </label>
+                
+                <label>
+                    <button onclick="closeForm()" style="width: 100px; height: 50px;">Add Race</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                </label>
+                </form>
+            </div>
+            </div>
+
+
+            
+            <table id="content" class="content">
+            </table>
+            </div>
+        <div class="graphBtn">
+        <button class="button" onclick="chartType('bar')">Generate Bar Graph</button>
+        <button class="button" onclick="chartType('line')">Generate Line Graph</button>
+        <button class="button" onclick="chartType2('line')">Generate pie Graph</button>
+        <button class="button" onclick="chartType('bubble')">Generate Bubble Graph</button>
+        </div>
+        
+
+        <div class="graphstyle">
+            <canvas  id="myCharthp" ></canvas>
+        </div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="js/main.js"></script>
+    <script src="js/forcharts.js"></script>
+
+    </body>
+    <script src="js/main.js"></script>
+    <script src="js/forcharts.js"></script>
+
+</html>

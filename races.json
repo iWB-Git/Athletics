@@ -1,0 +1,30 @@
+[
+  {
+    "id": "dadasda",
+    "year": "2022-12-13",
+    "racetype": "100",
+    "tt": "12",
+    "medal": "Gold"
+  },
+  {
+    "id": "Waynter",
+    "year": "2022-12-14",
+    "racetype": "100",
+    "tt": "15",
+    "medal": "Gold"
+  },
+  {
+    "id": "Winter Olympics",
+    "year": "2022-12-14",
+    "racetype": "100",
+    "tt": "22",
+    "medal": "Gold"
+  },
+  {
+    "id": "Summer Olympics",
+    "year": "2022-12-14",
+    "racetype": "200",
+    "tt": "22",
+    "medal": "Gold"
+  }
+]
